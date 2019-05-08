@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://www.gstatic.com/firebasejs/5.11.0/firebase.js"></script>
+    <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.css" />
+    <title>Pong Game</title>
+	<style>
+	canvas{
+		position: absolute;
+		top: 20%;
+		left: 20%;
+	}
+	#score-table
+	{
+		position: absolute;
+		top: 10%;
+		left: 20%;
+	} 
+    </style> 
+    
+</head>
+<body>
+    <div id='mainContent'></div>
+    <table id="score-table" >
+        <tr>
+            <th id='aiscore'> AI1 score - 0</th>
+            <th> &nbsp;&nbsp;&nbsp; SCORE TABLE FOR PONG-AI &nbsp;&nbsp;&nbsp;</th>
+            <th id='playerscore'> Player score - 0</th>
+        </tr>
+    </table>
+	<p id="playing"></p>
+    <a id="a"></a>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@0.11.2"> </script>
+	<script src="p_game.js"></script>
+    <script src="fireBase.js"></script>
+    
+    <h1>Welcome</h1>
+    <button onclick="mainApp.logOut()" >Log Out</button><br/>
+    <button id="write" onclick="mainApp.fnCreate()" hidden>Write</button><br/>
+    <button id="upload" onclick="mainApp.uploadData()" hidden>Upload</button>
+    <script src="main.js"></script>
+    
+</body>
+</html>
