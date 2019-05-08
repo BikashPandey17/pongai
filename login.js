@@ -15,6 +15,7 @@
           }
         },
         // Will use popup for IDP Providers sign-in flow instead of the default, redirect.
+        credentialHelper: firebaseui.auth.CredentialHelper.NONE,
         signInFlow: 'popup',
         signInSuccessUrl: 'main.html',
         signInOptions: [
