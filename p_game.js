@@ -8,11 +8,8 @@ canvas.height = height;
 var context = canvas.getContext('2d');
 var a = document.getElementById("a");
 var filejson = null;
-
-//var firebase = app_firebase;
-//var storage = firebase.storage().ref();
-console.log('new');
-console.log(firebase);
+var a = document.getElementById('write');
+var b = document.getElementById('upload');
 
 window.onload = function() {
     document.body.appendChild(canvas);
@@ -255,6 +252,7 @@ AI.prototype.save_data = function(player, computer, ball){
 
 AI.prototype.new_turn=function(){
     console.log('lost');
+    a.click();
     this.turn =this.turn +1;
     console.log(this.turn);
     if(this.turn > 9){
@@ -263,6 +261,7 @@ AI.prototype.new_turn=function(){
 }
 AI.prototype.write_file=function(){
     console.log('called');
+    a.click();
     if(this.keep_training_records){
         for(i=0; i < 3; i++ ){
             if(this.training_data[i].length > this.training_records_to_keep)
@@ -296,27 +295,13 @@ AI.prototype.write_file=function(){
     // Get a reference to the database service
     }
     data = JSON.stringify({xs: data_xs, ys: data_ys});
-    // var storageRef = firebase.storage().ref('/train_data/'+data.name);
-    // var uploadTask = storageRef.put(data.name);
-    // uploadTask.on('state_changed',function(snapshot){
-    // },  function(error){
-    // },  function(){
-    //         var downloadURL= uploadTask.snapshot.downloadURL;
-    // });
-    // console.log(database);
-
-    // if(this.first_write){
-    //     this.first_write = false;
-    //     var a = document.getElementById('write');
-    //     a.click();
-    // }
-
+    
     
     file = new Blob([JSON.stringify({xs: data_xs, ys: data_ys})], {type: 'application/json'});
     filejson = file;
-    var a = document.getElementById('write');
+    
     a.click();
-    var b = document.getElementById('upload');
+    
     b.click();
     // a.href = URL.createObjectURL(file);
     // a.download = 'training_data.json';
