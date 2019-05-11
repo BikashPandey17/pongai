@@ -252,7 +252,7 @@ AI.prototype.save_data = function(player, computer, ball){
 
 AI.prototype.new_turn=function(){
     console.log('lost');
-    a.click();
+    //a.click();
     this.turn =this.turn +1;
     console.log(this.turn);
     if(this.turn > 9){
@@ -261,7 +261,7 @@ AI.prototype.new_turn=function(){
 }
 AI.prototype.write_file=function(){
     console.log('called');
-    a.click();
+    //a.click();
     if(this.keep_training_records){
         for(i=0; i < 3; i++ ){
             if(this.training_data[i].length > this.training_records_to_keep)
