@@ -7,17 +7,26 @@ Name suggests ... (to be updated)
 Use the package manager [pip](https://pip.pypa.io/en/stable/) to install foobar.
 
 ```bash
-pip install foobar
+pip install virtualenv
 ```
 
 ## Usage
 
-```python
-import foobar
+```pygame module
+python 3.7 (tested)
 
-foobar.pluralize('word') # returns 'words'
-foobar.pluralize('goose') # returns 'geese'
-foobar.singularize('phenomena') # returns 'phenomenon'
+make a virtualenv
+python -m virtualenv venv
+
+Activate the virtual environment
+In Windows: `venv\Script\activate`
+In UNIX : `source venv/bin/activate`
+
+Install requirements
+pip install -r requirements.txt
+
+Play the game
+python game.py
 ```
 
 ## Info
