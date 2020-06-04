@@ -21,7 +21,7 @@ foobar.singularize('phenomena') # returns 'phenomenon'
 ```
 
 ## Info
-- Details os the modules that are already created :
+- Details of the modules that are already created :
   Browser module for the game
 - Work done up until now - firebase deployment configs and browser deployment configs have been setup 
 - Modules To Be Created - pygame module(wip)
