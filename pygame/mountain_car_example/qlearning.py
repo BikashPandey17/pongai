@@ -87,7 +87,8 @@ for episode in range(EPISODES):
 	# Append the total reward calculated after each episode 
 	episode_rewards.append(episode_reward)
 
-	if not episode % SHOW_EVERY: 
+	if not episode % SHOW_EVERY:
+		np.save(f"qtables/{episode}-qtable.npy", q_table) 
 		average_reward = sum(episode_rewards[-SHOW_EVERY:]) / len(episode_rewards[-SHOW_EVERY:])
 		aggregate_episode_rewards['epi'].append(episode)
 		aggregate_episode_rewards['avg'].append(average_reward)
