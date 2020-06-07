@@ -20,6 +20,10 @@ class Paddle(pygame.sprite.Sprite):
         # Fetch the rectangle object that has the dimensions of the image.
         self.rect = self.image.get_rect()
 
+    def __str__(self):
+        # returns the center (x,y) coordinates of the paddle
+        return f"{self.rect.x}, {self.rect.y}"
+
     def moveUp(self, pixels):
         self.rect.y -= pixels
 		#Check that you are not going too far (off the screen)
@@ -31,3 +35,12 @@ class Paddle(pygame.sprite.Sprite):
 	    #Check that you are not going too far (off the screen)
         if self.rect.y > 400:
           self.rect.y = 400
+    
+    def action(self, choice):
+        '''
+        Gives us 2 total movement options. (0,1)
+        '''
+        if choice == 0:
+            self.moveUp(5)
+        elif choice == 1:
+            self.moveDown(5)
